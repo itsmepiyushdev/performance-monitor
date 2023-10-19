@@ -13,4 +13,10 @@ class Performance extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+    public function application(){
+        return $this->belongsTo(Application::class);
+    }
+    public function other_activity(){
+        return $this->belongsTo(OtherActivity::class);
+    }
 }

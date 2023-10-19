@@ -12,6 +12,6 @@ class Application extends Model
     protected $fillable=['application_name','active_status'];
 
     public function performances(){
-        $this->hasMany('Performance::class');
+        $this->hasMany(Performance::class);
     }
 }
