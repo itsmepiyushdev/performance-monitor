@@ -6,6 +6,7 @@ use App\Filament\Resources\OtherActivityResource\Pages;
 use App\Filament\Resources\OtherActivityResource\RelationManagers;
 use App\Models\OtherActivity;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -25,7 +26,10 @@ class OtherActivityResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('other_activity_name')->placeholder('Enter Other Activity Name')->required(),
+                Section::make()
+                ->schema([
+                    TextInput::make('other_activity_name')->placeholder('Enter Other Activity Name')->required(),
+                ])
             ]);
     }
 

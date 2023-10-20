@@ -6,6 +6,7 @@ use App\Filament\Resources\ApplicationResource\Pages;
 use App\Filament\Resources\ApplicationResource\RelationManagers;
 use App\Models\Application;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -24,10 +25,13 @@ class ApplicationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('application_name')
-                ->required()
-                ->placeholder('Enter Application Name')
-                ->maxLength(255),
+                Section::make()
+                ->schema([
+                    Forms\Components\TextInput::make('application_name')
+                    ->required()
+                    ->placeholder('Enter Application Name')
+                    ->maxLength(255),
+                ])
             ]);
     }
 
