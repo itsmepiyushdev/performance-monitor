@@ -39,3 +39,6 @@ To run the server use the following command.
 ```bash
    php artisan serve
 ```
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
